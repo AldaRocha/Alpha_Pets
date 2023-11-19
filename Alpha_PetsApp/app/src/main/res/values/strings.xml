@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Alpha Pets</string>
+    <string name="title_fragment_home">HomeFragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

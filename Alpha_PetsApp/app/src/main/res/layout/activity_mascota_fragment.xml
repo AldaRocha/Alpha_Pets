@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C9E6F3"
+    tools:context=".MascotaFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/classycoiffeurbold"
+                android:text="Mi Mascota"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="Dueño:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblNombreDueño"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="-"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="Mascota:"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblNombreMascota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="-"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lblEdadMascota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="-"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lblRazaMascota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="-"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/lblTamanioMascota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="-"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="¡NOTA!"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/lblNota"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="-"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btnAgregarMascota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/classycoiffeurbold"
+                android:text="AGREGAR NUEVA MASCOTA"
+                android:textSize="16sp"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/btnEliminarCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/classycoiffeurbold"
+                android:text="ELIMINAR CUENTA"
+                android:textSize="16sp"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

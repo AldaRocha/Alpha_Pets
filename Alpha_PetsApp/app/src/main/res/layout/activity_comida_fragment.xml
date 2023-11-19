@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C9E6F3"
+    tools:context=".ComidaFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/classycoiffeurbold"
+                android:text="Dispensador"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/classycoiffeurregular"
+                        android:text="Alimento"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        app:srcCompat="@drawable/iconocomida" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/classycoiffeurregular"
+                        android:text="Capacidad:"
+                        android:textSize="16sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarAlimento"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="50"
+                        android:progressTint="#000000" />
+
+                    <TextView
+                        android:id="@+id/lblCapAlimento"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/classycoiffeurregular"
+                        android:text="50%"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnBT"
+                        android:layout_width="79dp"
+                        android:layout_height="79dp"
+                        android:layout_gravity="center"
+                        android:background="#C9E6F3"
+                        android:src="@drawable/icono_bluetooth" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/classycoiffeurregular"
+                        android:text="Agua"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        app:srcCompat="@drawable/icono_agua" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/classycoiffeurregular"
+                        android:text="Capacidad:"
+                        android:textSize="16sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBarAgua"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:progress="50" />
+
+                    <TextView
+                        android:id="@+id/lblCapAgua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/classycoiffeurregular"
+                        android:text="50%"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/btnRefrescar"
+                        android:layout_width="79dp"
+                        android:layout_height="79dp"
+                        android:layout_gravity="center"
+                        android:background="#C9E6F3"
+                        android:src="@drawable/icono_refresh" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnDesconectar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/classycoiffeurregular"
+                android:text="Desconectar" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

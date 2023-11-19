@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navInicio"
+        android:icon="@drawable/icono_inicio"
+        android:title="Inicio"
+        />
+
+    <item
+        android:id="@+id/navTips"
+        android:icon="@drawable/icono_tips"
+        android:title="Tips"
+        />
+
+    <item
+        android:id="@+id/navMascota"
+        android:icon="@drawable/icono_mascota"
+        android:title="Mi mascota"
+        />
+</menu>

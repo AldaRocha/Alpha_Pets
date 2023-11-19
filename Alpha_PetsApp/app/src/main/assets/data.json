@@ -1,0 +1,29 @@
+
+[
+  {
+    "idMascota": 1,
+    "nombreMascota": "Max",
+    "edad": 2,
+    "raza": "Doberman",
+    "tamanio": "Mediano",
+    "persona": {
+      "idPersona": 1,
+      "nombrePersona": "Francico Rocha",
+      "usuario": "Alda",
+      "contrasenia": "2418Fran11@@"
+    }
+  },
+  {
+    "idMascota": 2,
+    "nombreMascota": "Pancho",
+    "edad": 5,
+    "raza": "Schnauzer",
+    "tamanio": "Chico",
+    "persona": {
+      "idPersona": 2,
+      "nombrePersona": "Alejandra Flores",
+      "usuario": "AleF25",
+      "contrasenia": "Alejandra_flores"
+    }
+  }
+]
