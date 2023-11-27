@@ -55,7 +55,7 @@ public class RESTLogin {
             
             lm = lc.login(u.getNombreUsuario(), u.getContrasenia());
             
-            if(lm != null){
+            if(lm != null && lm.size() > 0){
                 out = gson.toJson(lm);
             } else{
                 out = """
