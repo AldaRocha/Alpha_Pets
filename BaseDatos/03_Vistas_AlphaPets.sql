@@ -40,7 +40,9 @@ CREATE VIEW v_buscarPorUsuario AS
     
 DROP VIEW IF EXISTS v_datosDispensador;
 CREATE VIEW v_datosDispensador AS
-	SELECT	d.depositoComida,
+	SELECT	d.idDispensador,
+			d.numeroSerie,
+			d.depositoComida,
 			d.depositoAgua,
 			d.platoComida,
 			d.platoAgua

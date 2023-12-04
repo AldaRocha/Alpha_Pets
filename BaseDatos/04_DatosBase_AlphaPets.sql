@@ -6,6 +6,8 @@
 -- Fecha de elaboracion: 14-11-2023                                 			--
 -- ---------------------------------------------------------------------------- --
 
+USE alpha_pets;
+
 INSERT INTO dispensador(numeroSerie) VALUES("ABC12345");
 
 SELECT * FROM dispensador;
@@ -17,3 +19,5 @@ SELECT * FROM persona;
 INSERT INTO mascota(nombreMascota, edadMascota, razaMascota, tamanioMascota, idPersona) VALUES("Max", 3, "Doberman", "Mediano", 1);
 
 SELECT * FROM v_buscarporusuario;
+
+SELECT * FROM v_datosDispensador;
