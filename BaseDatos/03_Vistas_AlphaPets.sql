@@ -24,6 +24,7 @@ CREATE VIEW v_buscarPorUsuario AS
 				d.depositoAgua,
 				d.platoComida,
 				d.platoAgua,
+                d.rellenar,
                 
                 m.idMascota,
 				m.nombreMascota,
@@ -45,5 +46,6 @@ CREATE VIEW v_datosDispensador AS
 			d.depositoComida,
 			d.depositoAgua,
 			d.platoComida,
-			d.platoAgua
+			d.platoAgua,
+            d.rellenar
     FROM	dispensador d;

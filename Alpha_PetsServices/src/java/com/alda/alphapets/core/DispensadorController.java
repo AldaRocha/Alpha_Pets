@@ -71,6 +71,31 @@ public class DispensadorController {
         return exito;
     }
     
+    public boolean actualizarTiempoRellenar(Dispensador d) throws SQLException{
+        String query = "{CALL actualizarTiempoRellenar(?, ?)}";
+        boolean exito = true;
+        
+        try{
+            ConexionMySQL connMySQL = new ConexionMySQL();
+            
+            Connection conn = connMySQL.open();
+            
+            CallableStatement clblsmt = conn.prepareCall(query);
+            
+            clblsmt.setString(1, d.getNumeroSerie());
+            clblsmt.setString(2, d.getRellenar());
+            
+            clblsmt.executeUpdate();
+            
+            clblsmt.close();
+            conn.close();
+            connMySQL.close();
+        } catch(SQLException ex){
+            exito = false;
+        }
+        return exito;
+    }
+    
     public Dispensador getDatosDispensador(Dispensador d) throws SQLException{
         String query = "SELECT * FROM v_datosDispensador vdd WHERE vdd.idDispensador = ?";
         
@@ -105,6 +130,7 @@ public class DispensadorController {
         d.setDepositoAgua(rs.getString("depositoAgua"));
         d.setPlatoComida(rs.getString("platoComida"));
         d.setPlatoAgua(rs.getString("platoAgua"));
+        d.setRellenar(rs.getString("rellenar"));
         
         return d;
     }

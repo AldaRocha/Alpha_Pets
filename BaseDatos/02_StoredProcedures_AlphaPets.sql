@@ -138,3 +138,17 @@ BEGIN
 	WHERE	numeroSerie LIKE var_numeroSerie;
 END $$
 DELIMITER ;
+
+DROP PROCEDURE IF EXISTS actualizarTiempoRellenar;
+DELIMITER $$
+CREATE PROCEDURE actualizarTiempoRellenar(
+											IN	var_numeroSerie		VARCHAR(45),	-- 1
+
+											IN	var_rellenar		VARCHAR(20)		-- 2
+)
+BEGIN
+	UPDATE	dispensador
+    SET		rellenar = STR_TO_DATE(var_rellenar, '%H:%i')
+	WHERE	numeroSerie LIKE var_numeroSerie;
+END $$
+DELIMITER ;

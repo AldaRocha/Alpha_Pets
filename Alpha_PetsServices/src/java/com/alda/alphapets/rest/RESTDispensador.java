@@ -90,6 +90,54 @@ public class RESTDispensador {
         return Response.status(Response.Status.OK).entity(out).build();
     }
     
+    @Path("tiempo")
+    @Produces(MediaType.APPLICATION_JSON)
+    @POST
+    public Response actualizarRellenado(@FormParam("datosDispensador") @DefaultValue("") String datosDispensador) throws Exception{
+        String out = null;
+        Gson gson = new Gson();
+        Dispensador d = new Dispensador();
+        DispensadorController dc = new DispensadorController();
+        
+        try{
+            d = gson.fromJson(datosDispensador, Dispensador.class);
+            
+            if(d == null){
+                out = """
+                      {"error": "Los datos del dispensador se estan enviando incorrectamente. Intente de nuevo."}
+                      """;
+                return Response.status(Response.Status.OK).entity(out).build();
+            }
+            if(d.getNumeroSerie() == null || d.getNumeroSerie() == ""){
+                out = """
+                      {"error": "Asegurese de enviar el numero se serie. Intente de nuevo."}
+                      """;
+                return Response.status(Response.Status.OK).entity(out).build();
+            }
+            if(d.getRellenar() == null || d.getRellenar() == ""){
+                out = """
+                      {"error": "Asegurese de enviar el la hora en la que se rellenara el dispensador. Intente de nuevo."}
+                      """;
+                return Response.status(Response.Status.OK).entity(out).build();
+            }
+            
+            if(dc.actualizarTiempoRellenar(d)){
+                out = gson.toJson(d);
+            } else{
+                out = """
+                      {"error": "Hubo un error al registrar los datos del dispensador. Intente de nuevo."}
+                      """;
+            }
+        } catch(Exception ex){
+            ex.printStackTrace();
+            out = """
+                  {"exception": "%s"}
+                  """;
+            out = String.format(out, ex.getMessage());
+        }
+        return Response.status(Response.Status.OK).entity(out).build();
+    }
+    
     @Path("obtener")
     @Produces(MediaType.APPLICATION_JSON)
     @POST
@@ -102,6 +150,12 @@ public class RESTDispensador {
         try{
             d = gson.fromJson(datosDispensador, Dispensador.class);
             
+            if(d == null){
+                out = """
+                      {"error": "Los datos del dispensador se estan enviando incorrectamente. Intente de nuevo."}
+                      """;
+                return Response.status(Response.Status.OK).entity(out).build();
+            }
             if(d.getIdDispensador() == 0){
                 out = """
                       {"error": "Debe ingresar el identificador del dispensador."}

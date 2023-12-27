@@ -12,14 +12,16 @@ public class Dispensador {
     private String depositoAgua;
     private String platoComida;
     private String platoAgua;
+    private String rellenar;
 
-    public Dispensador(int idDispensador, String numeroSerie, String depositoComida, String depositoAgua, String platoComida, String platoAgua) {
+    public Dispensador(int idDispensador, String numeroSerie, String depositoComida, String depositoAgua, String platoComida, String platoAgua, String rellenar) {
         this.idDispensador = idDispensador;
         this.numeroSerie = numeroSerie;
         this.depositoComida = depositoComida;
         this.depositoAgua = depositoAgua;
         this.platoComida = platoComida;
         this.platoAgua = platoAgua;
+        this.rellenar = rellenar;
     }
 
     public Dispensador() {
@@ -71,5 +73,13 @@ public class Dispensador {
 
     public void setPlatoAgua(String platoAgua) {
         this.platoAgua = platoAgua;
+    }
+    
+    public String getRellenar() {
+        return rellenar;
+    }
+    
+    public void setRellenar(String rellenar){
+        this.rellenar = rellenar;
     }
 }

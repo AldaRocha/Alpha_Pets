@@ -7,9 +7,11 @@ import com.alda.alphapets.model.Usuario;
 import com.google.gson.Gson;
 import jakarta.ws.rs.DefaultValue;
 import jakarta.ws.rs.FormParam;
+import jakarta.ws.rs.GET;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import java.util.ArrayList;
@@ -30,7 +32,7 @@ public class RESTLogin {
         Usuario u = new Usuario();
         List<Mascota> lm = new ArrayList<>();
         LoginController lc = new LoginController();
-        
+
         try{
             u = gson.fromJson(datosUsuario, Usuario.class);
             
@@ -69,6 +71,32 @@ public class RESTLogin {
                   """;
             out = String.format(out, ex.getMessage());
         }
+        return Response.status(Response.Status.OK).entity(out).build();
+    }
+    
+    @Path("pruebaGet")
+    @Produces(MediaType.APPLICATION_JSON)
+    @GET
+    public Response pruebaGet(@QueryParam("si") @DefaultValue("") String si) throws Exception{
+        String out = null;
+        System.out.println("Entro a prueba con GET: " + si);
+        out = """
+              {"exito": "Entro con GET: %s"}
+              """;
+        out = String.format(out, si);
+        return Response.status(Response.Status.OK).entity(out).build();
+    }
+    
+    @Path("pruebaPost")
+    @Produces(MediaType.APPLICATION_JSON)
+    @POST
+    public Response pruebaPost(@FormParam("si") @DefaultValue("") String si) throws Exception{
+        String out = null;
+        System.out.println("Entro a prueba con POST: " + si);
+        out = """
+              {"exito": "Entro con POST: %s"}
+              """;
+        out = String.format(out, si);
         return Response.status(Response.Status.OK).entity(out).build();
     }
 }

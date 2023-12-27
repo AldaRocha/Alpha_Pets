@@ -12,6 +12,7 @@ CREATE DATABASE IF NOT EXISTS alpha_pets;
 
 USE alpha_pets;
 
+DROP TABLE IF EXISTS usuario;
 CREATE TABLE usuario(
 	idUsuario		INT NOT NULL PRIMARY KEY AUTO_INCREMENT,	-- 1
     nombreUsuario	VARCHAR(30) NOT NULL DEFAULT "",			-- 2
@@ -19,15 +20,18 @@ CREATE TABLE usuario(
     estatus			INT NOT NULL DEFAULT 1						-- 4
 );
 
+DROP TABLE IF EXISTS dispensador;
 CREATE TABLE dispensador(
 	idDispensador	INT NOT NULL PRIMARY KEY AUTO_INCREMENT,	-- 1
     numeroSerie		VARCHAR(45) NOT NULL DEFAULT "",			-- 2
     depositoComida	VARCHAR(45) NOT NULL DEFAULT "",			-- 3
     depositoAgua	VARCHAR(45) NOT NULL DEFAULT "",			-- 4
     platoComida		VARCHAR(45) NOT NULL DEFAULT "",			-- 5
-    platoAgua		VARCHAR(45) NOT NULL DEFAULT ""				-- 6
+    platoAgua		VARCHAR(45) NOT NULL DEFAULT "",			-- 6
+    rellenar		TIME										-- 7
 );
 
+DROP TABLE IF EXISTS persona;
 CREATE TABLE persona(
 	idPersona		INT NOT NULL PRIMARY KEY AUTO_INCREMENT,	-- 1
     nombrePersona	VARCHAR(50) NOT NULL DEFAULT "",			-- 2
@@ -37,6 +41,7 @@ CREATE TABLE persona(
     CONSTRAINT persona_idDispensador_fk FOREIGN KEY (idDispensador) REFERENCES dispensador(idDispensador)
 );
 
+DROP TABLE IF EXISTS mascota;
 CREATE TABLE mascota(
 	idMascota		INT NOT NULL PRIMARY KEY AUTO_INCREMENT,	-- 1
     nombreMascota	VARCHAR(50) NOT NULL DEFAULT "",			-- 2

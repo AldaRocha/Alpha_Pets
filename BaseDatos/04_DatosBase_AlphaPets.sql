@@ -16,7 +16,7 @@ INSERT INTO persona(nombrePersona, idUsuario, idDispensador) VALUES("Francisco R
 
 SELECT * FROM persona;
 
-INSERT INTO mascota(nombreMascota, edadMascota, razaMascota, tamanioMascota, idPersona) VALUES("Max", 3, "Doberman", "Mediano", 1);
+INSERT INTO mascota(nombreMascota, edadMascota, razaMascota, tamanioMascota, idPersona) VALUES("Max", 3, "Doberman", "Mediano", 2);
 
 SELECT * FROM v_buscarporusuario;
 

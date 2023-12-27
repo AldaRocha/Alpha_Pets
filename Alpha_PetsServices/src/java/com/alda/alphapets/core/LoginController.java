@@ -56,6 +56,7 @@ public class LoginController {
         d.setDepositoAgua(rs.getString("depositoAgua"));
         d.setPlatoComida(rs.getString("platoComida"));
         d.setPlatoAgua(rs.getString("platoAgua"));
+        d.setRellenar(rs.getString("rellenar"));
         
         u.setIdUsuario(rs.getInt("idUsuario"));
         u.setNombreUsuario(rs.getString("nombreUsuario"));
